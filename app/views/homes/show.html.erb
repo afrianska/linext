@@ -1,2 +1,6 @@
-<h1>linext</h1>
-<p>Find me in app/views/homes/show.html.erb</p>
+<h1>Linext</h1>
+<div>
+<% @posts.each do |post| %>
+  <%= post.title %>
+<% end %>
+</div>
