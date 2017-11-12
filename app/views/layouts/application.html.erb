@@ -9,11 +9,15 @@
   </head>
 
   <body>
-       <p class="notice"><%= notice %></p>
-       <p class="alert"><%= alert %></p>
+
     <header>
       <%= link_to "write a story", new_post_path %>
+      <% if user_signed_in? %>
+        <%= current_user.email %>
+      <% end %>
     </header>
+       <p class="notice"><%= notice %></p>
+       <p class="alert"><%= alert %></p>
     <%= yield %>
   </body>
 </html>
